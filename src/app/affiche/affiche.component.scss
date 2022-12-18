@@ -66,13 +66,6 @@
   }
 }
 
-
-
-ul#inline li {display:inline;}
-
-  
-
-
 .container {
     display: inline-block;
     position: relative;
@@ -198,7 +191,6 @@ dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
 
 ol ol,
 ul ul,
@@ -4526,7 +4518,6 @@ textarea.form-control-lg {
 .card {
   position: relative;
   display: flex;
-  display: inline-block;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -7402,7 +7393,6 @@ textarea.form-control-lg {
 
 .mb-5 {
   margin-bottom: 3rem !important;
-  display: inline;
 }
 
 .mb-auto {
@@ -7520,7 +7510,6 @@ textarea.form-control-lg {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
   padding-left: 3rem !important;
-  display: inline;
  
 }
 

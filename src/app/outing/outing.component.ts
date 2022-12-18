@@ -1,19 +1,35 @@
-import { Component } from '@angular/core';
-import { Out } from '../models/out';
-import { OutService } from '../services/out.service';
+import { Component, Input } from '@angular/core';
+import { Out } from '../models/Out';
+import { OutsService } from '../services/outs.service';
+
 
 @Component({
   selector: 'app-outing',
   templateUrl: './outing.component.html',
   styleUrls: ['./outing.component.scss']
 })
-
 export class OutingComponent {
-
   outs:Out[]=[];
-  constructor(private outservice:OutService){}
-  ngOnInit():void{
-   this.outs=this.outservice.getOutService();
+  outsF:Out[]=[];
+  outsBar:Out[]=[];
 
-  };
+ 
+ 
+
+  constructor(private outservice:OutsService){}
+  ngOnInit():void{
+   // this.outs=this.outservice.getouting();
+    this.outservice.getTable().subscribe(
+      (data) =>this.outs=data);
+
+    this.outservice.getTableF().subscribe(
+      (dataf) =>this.outsF=dataf);
+
+    this.outservice.getBar().subscribe(
+      (dataB)=>this.outsBar=dataB);
+   
+  }
+
+
+
 }

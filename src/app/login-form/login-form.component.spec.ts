@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutingComponent } from './outing.component';
+import { LoginFormComponent } from './login-form.component';
 
-describe('OutingComponent', () => {
-  let component: OutingComponent;
-  let fixture: ComponentFixture<OutingComponent>;
+describe('LoginFormComponent', () => {
+  let component: LoginFormComponent;
+  let fixture: ComponentFixture<LoginFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutingComponent ]
+      declarations: [ LoginFormComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OutingComponent);
+    fixture = TestBed.createComponent(LoginFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('OutingComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

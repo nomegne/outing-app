@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OutingComponent } from './outing.component';
+import { BackofficeComponent } from './backoffice.component';
 
-describe('OutingComponent', () => {
-  let component: OutingComponent;
-  let fixture: ComponentFixture<OutingComponent>;
+describe('BackofficeComponent', () => {
+  let component: BackofficeComponent;
+  let fixture: ComponentFixture<BackofficeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OutingComponent ]
+      declarations: [ BackofficeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OutingComponent);
+    fixture = TestBed.createComponent(BackofficeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,4 +21,3 @@ describe('OutingComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

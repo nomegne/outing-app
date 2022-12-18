@@ -1,6 +1,11 @@
 export interface Out{
-    categories:string;
+    id:number;
+    categorie: String;
     name:string;
-    description:string;
     lieu:string;
+    description:string;
+    contact:Float32Array;
+    heure_ouverture:Date;
+    heure_fermeture:Date;
+    image:String;
 }

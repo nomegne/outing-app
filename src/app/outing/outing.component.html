@@ -1,1 +1,161 @@
-<p>outing works!</p>
+
+<!--
+<ul >
+    <li *ngFor="let out of outs">
+        <a [routerLink]="['/out',out.id]">
+            <span>{{out.id}}</span>
+            <span>{{out.categorie}}</span>
+            <span>{{out.name}}</span>
+            <span>{{out.lieu}}</span>
+            <span>{{out.description}}</span>
+            <span>{{out.contact}}</span>
+            <span>{{out.heure_ouverture}}</span>
+            <span>{{out.heure_fermeture}}</span>
+            
+        </a>
+    </li>
+</ul>
+-->
+
+<!--recupere les trois premiere categorie-->
+    <!-- <ul >
+        <li *ngFor="let out of outsF">
+            <a [routerLink]="['/out',out.id]">
+                <span>{{out.id}}</span>
+                <span>{{out.categorie}}</span>
+                <span>{{out.name}}</span>
+                <span>{{out.lieu}}</span>
+                <span>{{out.description}}</span>
+                <span>{{out.contact}}</span>
+                <span>{{out.heure_ouverture}}</span>
+                <span>{{out.heure_fermeture}}</span>
+                
+            </a>
+        </li>
+    </ul> -->
+
+    <!--recupere les trois la categorie bar-->
+    <!-- <ul >
+        <li *ngFor="let out of outsBar">
+            <a [routerLink]="['/out',out.id]">
+                <span>{{out.id}}</span>
+                <span>{{out.categorie}}</span>
+                <span>{{out.name}}</span>
+                <span>{{out.lieu}}</span>
+                <span>{{out.description}}</span>
+                <span>{{out.contact}}</span>
+                <span>{{out.heure_ouverture}}</span>
+                <span>{{out.heure_fermeture}}</span>
+                
+            </a>
+        </li>
+    </ul> -->
+
+
+
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shop Homepage - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+      
+    </head>
+    
+    
+     <body>
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand" href="#!">logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Restaurant</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Bar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Cinéma</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">Musé</a></li>
+                           
+                        </ul>
+                        <form class="d-flex">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                                <li class="nav-item"><a class="navbar-brand" href="#!">connexion</a></li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header >
+                <div class="container">
+                        <div class="text-center text-white"> 
+                           <img class="card-img-hed" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                           <div class="text">
+                            <h1 class="display-4 fw-bolder">Shop in style</h1>
+                           </div>
+                        </div>
+               </div>
+            </header>
+            <!-- Section-->
+            <section class="py-5">
+                <div class="container px-4 px-lg-5 mt-5">
+                    <!-- <ul id="inline">
+                     <li  *ngFor="let out of outs">
+                        <a [routerLink]="['/out',out.id]">  -->
+                           
+                            <!--le parcours des elements-->
+                          
+                            <div class="row gy-1 gx-1 gx-lg-0 row-cols-4 row-cols-md-6 row-cols-xl-4 justify-content-center">
+                               
+                                <div *ngFor="let out of outs" class="col-md-12 col mb-5 ">
+                                    <a [routerLink]="['/out',out.id]"> 
+                                    <div class="card h-100">
+                                        <!-- Product image-->
+                                        <img class="card-img-top" src={{out.image}} alt="..." />
+                                        <!-- Product details-->
+                                        <div class="card-body p-4">
+                                            <div class="text-center">
+                                                <!-- Product name-->
+                                                <h5 class="fw-bolder"><span>{{out.categorie}}</span></h5>
+                                                <h5 class="fw-bolder"><span>{{out.name}}</span></h5>
+                                                <h5 class="fw-bolder"><span>{{out.lieu}}</span></h5>
+                                                <h5 class="fw-bolder"><span>{{out.heure_ouverture}}</span></h5>
+                                                <h5 class="fw-bolder"><span>{{out.heure_fermeture}}</span></h5>
+                        
+                                            </div>
+                                        </div>
+                                        <!-- Product actions-->
+                                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="this.router.navigateByUrl('/details')">Details</a></div>
+                                           
+                                        </div>
+                                    </div>
+                                   </a>
+                                </div>
+                               
+            
+                            </div>
+                       
+                        <!-- </a>
+
+                     </li>
+                    </ul> -->
+                   
+                </div>
+            </section>
+            <!-- Footer-->
+            <footer class="py-5 bg-dark">
+                <div class="container"><p class="m-0 text-center text-white">Muriane nomegne</p></div>
+            </footer>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+        </body>
+

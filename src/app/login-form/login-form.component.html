@@ -1,0 +1,56 @@
+
+<!--<p>Value email:{{email.value}}</p>-->
+<!--
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email">
+</div>
+<div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+    <div *ngIf="loginForm.controls['email'].errors?.['required']">
+    please enter a email
+    </div>
+     <div *ngIf="loginForm.controls['email'].errors?.['email']">
+        please enter a valid email
+     </div>
+   
+</div>
+
+<div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" formControlName="password">
+</div>
+
+<button type="submit" [disabled]="!loginForm.valid">Log in</button>
+</form>-->
+
+
+
+ <body>
+ <div id="container">
+ <!-- zone de connexion -->
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h1>Connexion</h1>
+    <div>
+        <label for="email"><b>Email</b></label>
+        <input id="email" type="email" placeholder="Entrer votre email" formControlName="email">
+    </div>
+    <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+        <div *ngIf="loginForm.controls['email'].errors?.['required']">
+        please enter a email
+        </div>
+         <div *ngIf="loginForm.controls['email'].errors?.['email']">
+            please enter a valid email
+         </div>
+       
+    </div>
+    
+    <div>
+        <label for="password"><b>Mot de passe</b></label>
+        <input id="password" type="password" placeholder="Entrer votre password" formControlName="password">
+    </div>
+    
+    <button type="submit" [disabled]="!loginForm.valid">Log in</button>
+    </form>
+ </div>
+ </body>
