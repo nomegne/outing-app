@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
+onSubmit($event:any){
+  console.log("parent",$event)
+}
 }

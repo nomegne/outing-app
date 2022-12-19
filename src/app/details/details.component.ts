@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Out } from '../models/Out';
 import { OutsService } from '../services/outs.service';
 
@@ -12,12 +12,29 @@ import { OutsService } from '../services/outs.service';
 export class DetailsComponent {
 
   outs:Out[]=[];
+  
+  outsI:Out |undefined;
 
-  constructor(private outservice:OutsService){}
+  constructor(private outservice:OutsService,private route:ActivatedRoute){}
   ngOnInit():void{
     this.outservice.getTable().subscribe(
       (data)=>this.outs=data
     );
+
+    
+
+    this.route.params.subscribe(
+      (params)=>{
+        this.outservice.getTableID(params['id']).subscribe(
+          (data)=>{
+            if(data.length>0){
+              this.outsI=data[0]
+            }
+          }
+        )
+      }
+    )
+    
   }
 
 

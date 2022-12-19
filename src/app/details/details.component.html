@@ -1,5 +1,3 @@
-<p>details works!</p>
-
 
 <!-- <ul >
     <li *ngFor="let out of outs">
@@ -19,18 +17,24 @@
 
 
 
-<ul >
-    <li *ngFor="let out of outs">
+<!-- <ul >
+    <li *ngFor="let out of outsE">
         <a [routerLink]="['/out',out.id]">
-            <span>{{out.id}}</span>
+          <span>{{out.categorie}}</span>
+           
             <span>{{out.categorie}}</span>
-            <span>{{out.name}}</span>
-            <span>{{out.lieu}}</span>
-            <span>{{out.description}}</span>
-            <span>{{out.contact}}</span>
-            <span>{{out.heure_ouverture}}</span>
-            <span>{{out.heure_fermeture}}</span>
+            
             
         </a>
     </li>
-</ul>
+</ul> -->
+
+
+<div *ngIf="outsI">
+
+    <p>{{outsI.categorie}}</p>
+    <p>{{outsI.name}}</p>
+
+</div>
+
+<p *ngIf="!outsI">Aucun article n'a été trouvé</p>

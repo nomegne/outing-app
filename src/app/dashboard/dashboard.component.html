@@ -1,9 +1,45 @@
-<p>dashboard works!</p>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Shop Item - Start Bootstrap Template</title>
 
-</head>
+
+  <table>
+  
+    <caption>Comparatif des formules d'abonnement</caption>
+  
+    <tr> 
+        <th>Categogie</th> 
+        <th>Name</th> 
+        <th>Lieu</th> 
+        <th>Description</th> 
+        <th>Contacts</th> 
+        <th>Heure d'ouverture</th> 
+        <th>Heure de fermeture</th> 
+        <th> </th> 
+        <th> </th> 
+    </tr>
+
+                <tr *ngFor="let out of outs"> 
+
+                    <td>{{out.categorie}}</td>
+                     <td>{{out.name}}</td>
+                      <td>{{out.lieu}}</td> 
+                      <td>{{out.description}}</td> 
+                      <td>{{out.contact}}</td> 
+                      <td>{{out.heure_ouverture}}</td> 
+                      <td>{{out.heure_fermeture}}</td>
+                      <td>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" [routerLink]="['/details',out.id]">Modifier</a></div>
+                           
+                        </div>
+                      </td>
+                      <td>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" [routerLink]="['/details',out.id]">Supprimer</a></div>
+                           
+                        </div>
+                      </td>
+                  </tr>
+  
+  
+  </table>
+  
+  

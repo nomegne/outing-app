@@ -8,15 +8,16 @@ import { PrivateComponent } from './private/private.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OutingComponent } from './outing/outing.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AfficheComponent } from './affiche/affiche.component';
 import { LoginComponent } from './login/login.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BackofficeComponent } from './protected/backoffice/backoffice.component';
-import { BarComponent } from './bar/bar.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { DetailsComponent } from './details/details.component';
+import { AjoutComponent } from './ajout/ajout.component';
+import { ModifierComponent } from './modifier/modifier.component';
 
 
 @NgModule({
@@ -26,14 +27,15 @@ import { DetailsComponent } from './details/details.component';
     PrivateComponent,
     DashboardComponent,
     OutingComponent,
-    AfficheComponent,
     LoginComponent,
     LoginFormComponent,
     BackofficeComponent,
-    BarComponent,
+    
     FooterComponent,
     HeaderComponent,
     DetailsComponent,
+    AjoutComponent,
+    ModifierComponent,
     
  
   ],
