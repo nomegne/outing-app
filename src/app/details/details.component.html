@@ -1,40 +1,57 @@
 
-<!-- <ul >
-    <li *ngFor="let out of outs">
-        <a [routerLink]="['/out',out.id]">
-            <span>{{out.id}}</span>
-            <span>{{out.categorie}}</span>
-            <span>{{out.name}}</span>
-            <span>{{out.lieu}}</span>
-            <span>{{out.description}}</span>
-            <span>{{out.contact}}</span>
-            <span>{{out.heure_ouverture}}</span>
-            <span>{{out.heure_fermeture}}</span>
-            
-        </a>
-    </li>
-</ul> -->
 
+  <app-header> </app-header>
 
+         <p> </p>
 
-<!-- <ul >
-    <li *ngFor="let out of outsE">
-        <a [routerLink]="['/out',out.id]">
-          <span>{{out.categorie}}</span>
-           
-            <span>{{out.categorie}}</span>
-            
-            
-        </a>
-    </li>
-</ul> -->
-
-
-<div *ngIf="outsI">
-
+<!-- <div *ngIf="outsI">
     <p>{{outsI.categorie}}</p>
     <p>{{outsI.name}}</p>
+    <p>{{outsI.lieu}}</p>
+    <p>{{outsI.description}}</p>
+    <p>{{outsI.contact}}</p>
+    <p>{{outsI.heure_ouverture}}</p>
+    <p>{{outsI.heure_fermeture}}</p>
+   
+</div> -->
 
-</div>
+<table>
+  
+  <caption>Caracteristiques</caption>
+  
+  <colgroup>
+
+<col style="width:200px">
+
+<col>
+
+<col>
+
+</colgroup>
+
+<tr> 
+<th>Categories</th> <th>Name</th> <th>Lieu</th>
+<th>Description</th> <th>Contact</th> <th>Heure d'ouverture</th>
+<th>Heure de fermeture</th>
+</tr>
+
+<tr *ngIf="outsI"> 
+<td>{{outsI.categorie}}</td> 
+<td>{{outsI.name}}</td> 
+<td>{{outsI.lieu}}</td> 
+<td>{{outsI.description}}</td> 
+<td>{{outsI.contact}}</td> 
+<td>{{outsI.heure_ouverture}}</td> 
+<td>{{outsI.heure_fermeture}}</td> 
+</tr>
+
+</table>
+
 
 <p *ngIf="!outsI">Aucun article n'a été trouvé</p>
+
+<p>
+  <button type="submit" [routerLink]="['/out']">Retour</button>
+</p>
+
+<app-footer></app-footer>

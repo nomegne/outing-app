@@ -21,8 +21,7 @@ export class DetailsComponent {
       (data)=>this.outs=data
     );
 
-    
-
+  
     this.route.params.subscribe(
       (params)=>{
         this.outservice.getTableID(params['id']).subscribe(

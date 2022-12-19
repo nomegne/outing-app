@@ -9,6 +9,7 @@ import { AuthGuard } from './utils/auth.guard';
 import { HeaderComponent } from './header/header.component';
 import { DetailsComponent } from './details/details.component';
 import { AjoutComponent } from './ajout/ajout.component';
+import { ModifierComponent } from './modifier/modifier.component';
 
 const routes: Routes = [
   {path:'dash',component:DashboardComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'header',component:HeaderComponent},
   {path:'details/:id',component:DetailsComponent},
   {path:'ajout',component:AjoutComponent},
+  {path:'modif/:id',component:ModifierComponent},
   {path:'admin',component:BackofficeComponent, canActivate :[AuthGuard]}
    
 

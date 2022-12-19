@@ -44,16 +44,6 @@ export class OutsService {
 
   //inserer les données 
 ajout( donnees: {
-
-    id: number | null | undefined;
-    // categorie: String | null | undefined;
-    // name: string | null | undefined;
-    // lieu: string | null | undefined;
-    // description: string | null | undefined;
-    // contact: Float32Array | null | undefined;
-    // heure_ouverture: Date | null | undefined;
-    // heure_fermeture: Date | null | undefined;
-    // image: String | null | undefined;
   
 }):Observable<any>{
   const header=new HttpHeaders().set("apikey",environment.api.key);
@@ -62,10 +52,10 @@ ajout( donnees: {
 
 }
   
-  setTableOut(){
-   
-  }
+  setTableOut(){}
 
-  }
+  //modifier les données
+
+}
 
 

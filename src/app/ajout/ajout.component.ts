@@ -26,12 +26,6 @@ export class AjoutComponent {
 
  constructor(private outService:OutsService, private router: Router){}
 
-//  ngOnInit():void{
-//   // this.outs=this.outservice.getouting();
-//    this.outService.setTableOut().subscribe(
-//      (data) =>this.outA=data)
-  
-//  }
 
  onSubmit(){
   console.log(this.AjoutForm.value);

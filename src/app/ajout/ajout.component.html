@@ -1,4 +1,4 @@
-<p>ajout works!</p>
+
 
 
 <body>
@@ -6,10 +6,6 @@
     <!-- zone de connexion -->
     <form [formGroup]="AjoutForm" (ngSubmit)="onSubmit()">
        <h1>Ajouter</h1>
-       <div>
-           <label for="id"><b>Id</b></label>
-           <input id="id" type="number"  formControlName="id">
-       </div>
 
        <div>
         <label for="categorie"><b>Categorie</b></label>
@@ -50,10 +46,9 @@
         <label for="image"><b>Image</b></label>
         <input id="image" type="test" >
     </div>
-
-    
        
        <button type="submit" [routerLink]="['/ajout']">Ajouter</button>
+       <button type="submit" [routerLink]="['/admin']">Retour</button>
        </form>
     </div>
     </body>
