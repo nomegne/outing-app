@@ -78,7 +78,7 @@ ul#inline li {display:inline;}
     position: relative;
 }
 .container .text {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(240, 225, 225, 0.8);
     z-index: 1;
     position: absolute;
     text-align: center;
@@ -87,7 +87,7 @@ ul#inline li {display:inline;}
     left: 0;
     right: 0;
     top: 30%;
-    color: white;
+    color: rgb(15, 3, 3);
     width: 70%;
 }
 

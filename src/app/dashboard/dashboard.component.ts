@@ -14,8 +14,11 @@ export class DashboardComponent {
    // this.outs=this.outservice.getouting();
     this.outservice.getTable().subscribe(
       (data) =>this.outs=data);
+  }
 
-   
-   
+  
+  onDelete(id:number){
+    this.outservice.delete(id).subscribe();
+    window.location.reload
   }
 }

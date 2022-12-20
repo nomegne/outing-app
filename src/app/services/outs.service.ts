@@ -54,7 +54,28 @@ ajout( donnees: {
   
   setTableOut(){}
 
-  //modifier les données
+  //supprimer les données
+
+  delete(id:number){
+    const headers = new HttpHeaders().set("apikey",environment.api.key)
+    return this.httpClient.delete(environment.api.url+`service?id=eq.${id}`,{'headers':headers})
+  }
+
+
+
+  //modifier les données 
+
+
+  modif( id:number, donneesM: {
+  
+  }):Observable<any>{
+    const header=new HttpHeaders().set("apikey",environment.api.key);
+    return this.httpClient.patch<Out[]>
+   (environment.api.url+'service?id=eq.'+id,donneesM,{'headers':header});
+  
+  }
+
+  setTableOutM(){}
 
 }
 

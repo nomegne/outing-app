@@ -1,12 +1,53 @@
-<div *ngIf="outsI">
-
-    <p>{{outsI.categorie}}</p>
-    <p>{{outsI.name}}</p>
-
-
-</div>
 
 
 
 
 
+<form [formGroup]="modifForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label for="categorie"><b>Categorie</b></label>
+      <input id="categorie" type="test"  formControlName="categorie">
+    </div>
+    <div>
+      <label for="name"><b>Name</b></label>
+      <input id="name" type="test"  formControlName="name">
+    </div>
+    <div>
+      <label for="lieu"><b>Lieu</b></label>
+      <input id="lieu" type="test"  formControlName="lieu">
+    </div>
+    <div>
+      <label for="description"><b>Description</b></label>
+      <input id="description" type="test"  formControlName="description">
+    </div>
+    <div>
+      <label for="contact"><b>Contact</b></label>
+      <input id="contact" type="test"  formControlName="contact">
+  </div>
+  
+    <div>
+      <label for="heure_ouverture"><b>Heure_ouverture</b></label>
+      <input id="heure_ouverture" type="test"  formControlName="heure_ouverture">
+  </div>
+
+  <div>
+      <label for="heure_fermeture"><b>Heure_fermeture</b></label>
+      <input id="heure_fermeture" type="test"  formControlName="heure_fermeture">
+  </div>
+
+  <div>
+      <label for="image"><b>Image</b></label>
+      <input id="image" type="test" >
+  </div>
+  
+  
+    <div class="button">
+      <button type="submit"[routerLink]="['/modif',id]">Modifier</button>
+     
+      <button type="submit" [routerLink]="['/admin']">Retour</button>
+    </div>
+  </form>
+
+  <p *ngIf="!outsI">Aucun article n'a été trouvé</p>
+  
