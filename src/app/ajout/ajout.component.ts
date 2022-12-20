@@ -13,7 +13,7 @@ export class AjoutComponent {
   outA:Out[]=[];
 
   AjoutForm=new FormGroup({
-    id:new FormControl('',[Validators.required]),
+    
     categorie:new FormControl('',[Validators.required]),
     name:new FormControl('',[Validators.required]),
     lieu:new FormControl('',[Validators.required]),
@@ -29,14 +29,15 @@ export class AjoutComponent {
 
  onSubmit(){
   console.log(this.AjoutForm.value);
-  let donnees={id:Number(this.AjoutForm.value["id"]),
-              categorie:(this.AjoutForm.value["categorie"]),
-              name:(this.AjoutForm.value["name"]),
-              lieu:(this.AjoutForm.value["lieu"]),
-              description:(this.AjoutForm.value["description"]),
-              heure_ouverture:(this.AjoutForm.value["heure_ouverture"]),
-              heure_fermeture:(this.AjoutForm.value["heure_fermeture"]),
-              image:(this.AjoutForm.value["image"]),}
+  let donnees={
+              categorie:this.AjoutForm.value["categorie"],
+              name:this.AjoutForm.value["name"],
+              lieu:this.AjoutForm.value["lieu"],
+              description:this.AjoutForm.value["description"],
+              heure_ouverture:this.AjoutForm.value["heure_ouverture"],
+              heure_fermeture:this.AjoutForm.value["heure_fermeture"],
+              image:this.AjoutForm.value["image"]
+            }
   console.log(donnees);
   this.outService.ajout(donnees).subscribe(
     {
@@ -47,7 +48,7 @@ export class AjoutComponent {
     }
     
   )
- 
+ this.AjoutForm.reset();
   
  }
 

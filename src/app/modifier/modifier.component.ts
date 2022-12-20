@@ -35,12 +35,12 @@ export class ModifierComponent {
     
     this.route.params.subscribe(
       (params)=>{
-       // this.id=params['id'];
+     this.id=params['id'];
         this.outservice.getTableID(params['id']).subscribe(
           (data)=>{
             if(data.length>0){
               this.outsI=data[0]
-              this.id=data[0].id
+              //this.id=data[0].id
               this.modifForm.controls.categorie.setValue(this.outsI.categorie)
               this.modifForm.controls.name.setValue(this.outsI.name)
               this.modifForm.controls.lieu.setValue(this.outsI.lieu)
@@ -60,11 +60,11 @@ export class ModifierComponent {
     
     let donneesM={
 
-          categorie:(this.modifForm.value["categorie"]),
-          name:(this.modifForm.value["name"]),
-          contact:(this.modifForm.value["contact"]),
-          heure_ouverture:(this.modifForm.value["heure_ouverture"]),
-          heure_fermeture:(this.modifForm.value["heure_fermeture"])
+          categorie:this.modifForm.value["categorie"],
+          name:this.modifForm.value["name"],
+          contact:this.modifForm.value["contact"],
+          heure_ouverture:this.modifForm.value["heure_ouverture"],
+          heure_fermeture:this.modifForm.value["heure_fermeture"]
          }
          console.log(donneesM);
 
@@ -74,6 +74,7 @@ export class ModifierComponent {
             this.outservice.setTableOutM();
           }}
          )
+         this.modifForm.reset();
   
 }
 
